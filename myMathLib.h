@@ -19,7 +19,7 @@ template <typename T>
 inline T absolute(const T& value)
 {
 	if (value < (T)0)	return value * (T)(-1);
-	else				return value;
+	else			return value;
 }
 
 namespace math {
@@ -92,7 +92,7 @@ namespace derivative {
 namespace optimization 
 {
 	template <typename T>
-	inline T goldenSectionSearch(T a, T b, const T& eps, T (*foo)(const T&))
+	inline T goldenSectionSearch(T& a, T& b, const T& eps, T (*foo)(const T&))
 	{
 		T x1, x2, y1, y2;
 
